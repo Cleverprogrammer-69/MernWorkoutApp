@@ -9,9 +9,7 @@ const PORT=process.env.PORT || 3001
 const MONGO_URL= process.env.MONGODB_URI || `mongodb+srv://abdullah:KS9uoq3aIfwndxjG@mernworkoutapp.pu1fuzq.mongodb.net/?retryWrites=true&w=majority`
 app.use(express.json())
 app.use(cors('*'));
-if(process.env.NODE_ENV === "production"){
-    app.use(express.static("frontend/build"))
-}
+
 
 app.use((req,res,next)=>{
     console.log(req.path,req.method)
