@@ -33,7 +33,7 @@ export default function Home() {
        <div className="workouts">
         <h3>Workouts</h3>
         
-            {workouts && workouts.map(async(workout)=>(
+            {workouts && workouts.map((workout)=>(
                 <WorkoutDetails workout={workout} key={workout._id} />
             ))}
  
