@@ -8,9 +8,13 @@ const app=express()
 const PORT=process.env.PORT || 3001
 const MONGO_URL= process.env.MONGODB_URI || `mongodb+srv://abdullah:KS9uoq3aIfwndxjG@mernworkoutapp.pu1fuzq.mongodb.net/?retryWrites=true&w=majority`
 app.use(express.json())
-app.use(
-    cors("*")
-    );
+app.use(cors(
+    {
+        origin: ["https://mern-workout-frontend.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 if(process.env.NODE_ENV === "production"){
     app.use(express.static("frontend/build"))
 }
