@@ -1,5 +1,6 @@
 {
     "version":2,
+    "name": "workoutapp",
     "builds": [
       { "src": "*.js", "use": "@vercel/node" }
     ],
