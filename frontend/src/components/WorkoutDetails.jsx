@@ -7,7 +7,7 @@ const WorkoutDetails = ({ workout }) => {
   const{dispatch}= useWorkoutsContext()
 const deleteClick=async ()=>{
   try {
-      const response =await axios.delete(`https://mern-workout-api.vercel.app/api/workouts/${workout._id}`)
+      const response =await axios.delete(`/api/workouts/${workout._id}`)
   if (response.status !== 200) {
     throw new Error('Network response was not ok');
   }
@@ -30,7 +30,7 @@ const deleteClick=async ()=>{
       <p>{workout.createdAt}</p>
       </div>
       <div className="workout__actions">
-        <Link className="edit__link" to={`https://mern-workout-api.vercel.app/edit/${workout._id}`}>
+        <Link className="edit__link" to={`/edit/${workout._id}`}>
         <div className="edit">
           <EditIcon fontSize="large" />
           <br />
