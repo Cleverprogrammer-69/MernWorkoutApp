@@ -8,7 +8,7 @@ export default function Home() {
     useEffect(() => {
       const fetchWorkouts = async () => {
         try {
-          const response = await axios.get(`/api/workouts`);
+          const response = await axios.get(`https://mern-workout-api.vercel.app/api/workouts`);
 
           if (response.status !== 200) {
             throw new Error('Network response was not ok');
