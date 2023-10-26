@@ -11,28 +11,15 @@ const MONGO_URL=`mongodb+srv://abdullah:KS9uoq3aIfwndxjG@mernworkoutapp.pu1fuzq.
 app.use(express.json())
 app.use(cors());
 app.use(express.urlencoded({ extended: false }));
-app.use(cookieParser());
+
 app.use((req,res,next)=>{
     console.log(req.path,req.method)
     next()
 })
-
+mongoose.connect(MONGO_URL)
 app.use("/api/workouts",router)
-
-const connectToMongoDb=async(MONGO_URL)=>{
-    try {
-        await mongoose.connect(MONGO_URL)
-        if(PORT){
-        app.listen(PORT,()=>{
-        console.log("Mongo db is connected & Server is up on "+PORT)
-        }
-    export default app
-        
-        
+app.listen(PORT,()=>{
+    console.log("Server is Running")
 })
-    } catch (error) {
-        console.log(error)
-    }
-}
-connectToMongoDb(MONGO_URL)
+
 
