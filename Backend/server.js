@@ -3,10 +3,10 @@ import router from "./routes/WorkoutsRoute.js";
 import dotenv from "dotenv";
 import mongoose from 'mongoose'
 import cors from "cors"
-dotenv.config()
+
 const app=express()
-const PORT=process.env.PORT || 3001
-const MONGO_URL= process.env.MONGODB_URI || `mongodb+srv://abdullah:KS9uoq3aIfwndxjG@mernworkoutapp.pu1fuzq.mongodb.net/?retryWrites=true&w=majority`
+const PORT=3001
+const MONGO_URL=`mongodb+srv://abdullah:KS9uoq3aIfwndxjG@mernworkoutapp.pu1fuzq.mongodb.net/?retryWrites=true&w=majority`
 app.use(express.json())
 app.use(cors('*'));
 
