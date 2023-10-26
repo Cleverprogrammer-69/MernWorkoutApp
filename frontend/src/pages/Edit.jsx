@@ -17,7 +17,7 @@ export const Edit = () => {
       useEffect(() => {
         const getWorkout= async()=>{
             try {
-                const response= await axios.get(`https://mern-workout-api.vercel.app/api/workouts/${id}`)
+                const response= await axios.get(`/api/workouts/${id}`)
                 const json=await response.data
                 if (response.status !== 200) { // Check if the status is not 200
                     // throw new Error("Error fetching single user");
@@ -40,7 +40,7 @@ export const Edit = () => {
         const updatedWorkout = { title, load, reps }; // Include only the fields you want to update
       
         try {
-          const response = await axios.patch(`https://mern-workout-api.vercel.app/api/workouts/${id}`, updatedWorkout, {
+          const response = await axios.patch(`/api/workouts/${id}`, updatedWorkout, {
             headers: {
               "Content-Type": "application/json"
             }
