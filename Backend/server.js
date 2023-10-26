@@ -29,3 +29,4 @@ const connectToMongoDb=async(MONGO_URL)=>{
     }
 }
 connectToMongoDb(MONGO_URL)
+export default app
