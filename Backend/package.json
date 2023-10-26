@@ -1,0 +1,25 @@
+{
+  "name": "workoutapp",
+  "version": "1.0.0",
+  "description": "First Mern app",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "frontend-install":"cd frontend && npm install",
+    "frontend-build":"cd frontend && npm run build",
+    "heroku-postbuild":"npm run frontend-install && npm run frontend-build"
+  },
+  "author": "Abdullah",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "firebase": "^10.5.0",
+    "mongodb": "^6.1.0",
+    "mongoose": "^7.6.3"
+  }
+}
