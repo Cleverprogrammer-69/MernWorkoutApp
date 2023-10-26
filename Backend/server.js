@@ -9,7 +9,13 @@ const app=express()
 const PORT=3002
 const MONGO_URL=`mongodb+srv://abdullah:KS9uoq3aIfwndxjG@mernworkoutapp.pu1fuzq.mongodb.net/?retryWrites=true&w=majority`
 app.use(express.json())
-app.use(cors());
+app.use(cors(
+    {
+        origin: ["https://mern-workout-frontend.vercel.app"],
+        methods: ["POST", "GET", "PATCH", "DELETE"],
+        credentials: true
+    }
+));
 app.use(express.urlencoded({ extended: false }));
 
 app.use((req,res,next)=>{
