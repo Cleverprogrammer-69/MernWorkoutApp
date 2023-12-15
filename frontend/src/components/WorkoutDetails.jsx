@@ -34,13 +34,13 @@ const deleteClick=async ()=>{
         <Link className="edit__link" to={`/edit/${workout._id}`}>
         <div className="edit">
           <EditIcon fontSize="medium" />
-          <br />
+         
           
         </div>
         </Link>
         <div className="delete"  onClick={deleteClick}>
           <DeleteIcon fontSize="medium" />
-          <br />
+         
          
           </div>
         
