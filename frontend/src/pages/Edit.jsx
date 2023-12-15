@@ -14,10 +14,11 @@ export const Edit = () => {
       const [error, setError] = useState(null)
       const navigate=useNavigate()
       const {id}=useParams()
+    const URL="https://workoutapi-1.abdullah917.repl.co/api/workouts"
       useEffect(() => {
         const getWorkout= async()=>{
             try {
-                const response= await axios.get(`/api/workouts/${id}`)
+                const response= await axios.get(`${URL}/${id}`)
                 const json=await response.data
                 if (response.status !== 200) { // Check if the status is not 200
                     // throw new Error("Error fetching single user");
@@ -40,7 +41,7 @@ export const Edit = () => {
         const updatedWorkout = { title, load, reps }; // Include only the fields you want to update
       
         try {
-          const response = await axios.patch(`/api/workouts/${id}`, updatedWorkout, {
+          const response = await axios.patch(`${URL}/${id}`, updatedWorkout, {
             headers: {
               "Content-Type": "application/json"
             }
