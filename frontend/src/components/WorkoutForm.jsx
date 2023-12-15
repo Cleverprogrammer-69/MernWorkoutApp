@@ -8,12 +8,13 @@ const WorkoutForm = () => {
     const [load, setLoad] = useState("")
     const [reps, setReps] = useState("")
     const [error, setError] = useState(null)
+  const URL="https://workoutapi-1.abdullah917.repl.co/api/workouts"
     const handleSubmit = async (e) => {
       e.preventDefault();
       const workout = { title, load, reps };
   
       try {
-          const response = await axios.post("/api/workouts", workout, {
+          const response = await axios.post(URL, workout, {
               headers: {
                   "Content-Type": "application/json"
               }
