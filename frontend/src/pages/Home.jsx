@@ -5,10 +5,11 @@ import WorkoutForm from "../components/WorkoutForm";
 import {useWorkoutsContext} from '../hooks/useWorkoutsContext'
 export default function Home() {
   const {workouts,dispatch}= useWorkoutsContext()
+  const URL="https://workoutapi-1.abdullah917.repl.co/api/workouts"
     useEffect(() => {
       const fetchWorkouts = async () => {
         try {
-          const response = await axios.get(`/api/workouts`);
+          const response = await axios.get(URL);
 
           if (response.status !== 200) {
             throw new Error('Network response was not ok');
