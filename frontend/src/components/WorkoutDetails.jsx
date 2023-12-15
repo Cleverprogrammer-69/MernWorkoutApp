@@ -30,18 +30,18 @@ const deleteClick=async ()=>{
       <p><strong>Number of reps: </strong>{workout.reps}</p>
       <p>{workout.createdAt}</p>
       </div>
-      <div className="workout__actions">
+    <div className="workout__actions">
         <Link className="edit__link" to={`/edit/${workout._id}`}>
         <div className="edit">
-          <EditIcon fontSize="large" />
+          <EditIcon fontSize="medium" />
           <br />
-          <span>Edit</span>
+          
         </div>
         </Link>
         <div className="delete"  onClick={deleteClick}>
-          <DeleteIcon fontSize="large" />
+          <DeleteIcon fontSize="medium" />
           <br />
-          <span>Delete</span>
+         
           </div>
         
       </div>
