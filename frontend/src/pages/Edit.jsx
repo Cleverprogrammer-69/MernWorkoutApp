@@ -68,7 +68,7 @@ export const Edit = () => {
     return (
       <div>
         <form onSubmit={handleUpdate} className="create">
-          <h3>Add a new workout</h3>
+          <h3>Edit workout</h3>
           <label htmlFor="excerciseTitle">Excercise Title: </label>
           <input type="text" name='excerciseTitle' value={title} onChange={e=>setTitle(e.target.value)} required disabled/>
           <label htmlFor="excerciseLoad">Load (in KG): </label>
