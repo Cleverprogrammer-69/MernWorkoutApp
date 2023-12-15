@@ -71,8 +71,8 @@ header a {
   color: var(--error);
   background-color: rgb(255, 171, 171);
   border-radius: 15%;
-  padding: 1em;
-  width: 3em;
+  padding: 0.1rem;
+  /* width: 3rem; */
   text-align: center;
 }
 .edit{
@@ -81,8 +81,8 @@ header a {
   position: relative;
   right: 1em;
   border-radius: 15%;
-  padding: 1em;
-  width: 3em;
+  padding: 0.1rem;
+  /* width: 3rem; */
   text-align: center;
 }
 .edit__link{
