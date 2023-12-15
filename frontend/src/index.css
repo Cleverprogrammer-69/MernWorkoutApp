@@ -71,7 +71,7 @@ header a {
   color: var(--error);
   background-color: rgb(255, 171, 171);
   border-radius: 15%;
-  padding: 0.1rem;
+  padding: 0.25rem;
   /* width: 3rem; */
   text-align: center;
 }
@@ -81,7 +81,7 @@ header a {
   position: relative;
   right: 1em;
   border-radius: 15%;
-  padding: 0.1rem;
+  padding: 0.25rem;
   /* width: 3rem; */
   text-align: center;
 }
