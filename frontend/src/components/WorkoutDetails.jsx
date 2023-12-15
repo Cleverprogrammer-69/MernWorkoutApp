@@ -5,9 +5,10 @@ import EditIcon from '@mui/icons-material/Edit';
 import { Link } from "react-router-dom";
 const WorkoutDetails = ({ workout }) => {
   const{dispatch}= useWorkoutsContext()
+   const URL="https://workoutapi-1.abdullah917.repl.co/api/workouts"
 const deleteClick=async ()=>{
   try {
-      const response =await axios.delete(`/api/workouts/${workout._id}`)
+      const response =await axios.delete(`${URL}/${workout._id}`)
   if (response.status !== 200) {
     throw new Error('Network response was not ok');
   }
