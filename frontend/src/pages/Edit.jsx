@@ -14,7 +14,7 @@ export const Edit = () => {
       const [error, setError] = useState(null)
       const navigate=useNavigate()
       const {id}=useParams()
-    const URL="https://workoutapi-1.abdullah917.repl.co/api/workouts"
+    const URL="https://e952f5a8-1242-4313-91dd-67757ad4cb0e-00-ok5zps2ikmgr.worf.replit.dev/api/workouts"
       useEffect(() => {
         const getWorkout= async()=>{
             try {
