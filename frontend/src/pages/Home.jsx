@@ -5,7 +5,7 @@ import WorkoutForm from "../components/WorkoutForm";
 import {useWorkoutsContext} from '../hooks/useWorkoutsContext'
 export default function Home() {
   const {workouts,dispatch}= useWorkoutsContext()
-  const URL="https://wrokoutbuddy-api-7b6e29832f9c.herokuapp.com/api/workouts"
+  const URL="https://wrokoutbuddy-api-7b6e29832f9c.herokuapp.com/api/workouts";
     useEffect(() => {
       const fetchWorkouts = async () => {
         try {
