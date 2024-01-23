@@ -5,7 +5,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import { Link } from "react-router-dom";
 const WorkoutDetails = ({ workout }) => {
   const{dispatch}= useWorkoutsContext()
-   const URL="https://e952f5a8-1242-4313-91dd-67757ad4cb0e-00-ok5zps2ikmgr.worf.replit.dev/api/workouts"
+   const URL="https://wrokoutbuddy-api-7b6e29832f9c.herokuapp.com/api/workouts"
 const deleteClick=async ()=>{
   try {
       const response =await axios.delete(`${URL}/${workout._id}`)
