@@ -26,7 +26,7 @@ export default function Home() {
 
     
       fetchWorkouts()
-    }, [])
+    }, [dispatch])
     
   return (
     <div className="home">
@@ -37,7 +37,7 @@ export default function Home() {
             {workouts && workouts.map((workout)=>(
                 <WorkoutDetails workout={workout} key={workout._id} />
             ))}
-         {workouts.length==0 && <h4>No workouts. Let's add some.</h4>}
+         {workouts.length===0 && <h4>No workouts. Let's add some.</h4>}
  
        </div>
        

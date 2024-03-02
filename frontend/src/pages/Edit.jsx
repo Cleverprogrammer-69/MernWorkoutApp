@@ -2,7 +2,6 @@ import React from 'react'
 import { useState } from 'react'
 import axios from 'axios'
 import {useWorkoutsContext} from '../hooks/useWorkoutsContext'
-import Navbar from '../components/Navbar'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useEffect } from 'react'
 
@@ -34,7 +33,7 @@ export const Edit = () => {
             
         }
         getWorkout()
-    }, [])
+    }, [id])
       
     const handleUpdate = async (e) => {
         e.preventDefault();

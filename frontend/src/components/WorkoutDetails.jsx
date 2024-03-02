@@ -3,6 +3,7 @@ import { useWorkoutsContext } from "../hooks/useWorkoutsContext"
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 import { Link } from "react-router-dom";
+import formatDistanToNow from 'date-fns/formatDistanceToNow'
 const WorkoutDetails = ({ workout }) => {
   const{dispatch}= useWorkoutsContext()
    const URL="https://wrokoutbuddy-api-7b6e29832f9c.herokuapp.com/api/workouts"
@@ -28,7 +29,7 @@ const deleteClick=async ()=>{
       <h4>{workout.title}</h4>
       <p><strong>Load (kg): </strong>{workout.load}</p>
       <p><strong>Number of reps: </strong>{workout.reps}</p>
-      <p>{workout.createdAt}</p>
+      <p>{formatDistanToNow(new Date(workout.createdAt),{addSuffix:true,})}</p>
       </div>
     <div className="workout__actions">
         <Link className="edit__link" to={`/edit/${workout._id}`}>
