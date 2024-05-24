@@ -2,19 +2,19 @@ import { useState } from "react";
 import { useAuthContext } from "./useAuthContext";
 import axios from "axios";
 
-export const useSignup = () => {
+export const useLogin = () => {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const { dispatch } = useAuthContext();
   const URL = "https://mernworkoutapp-1.onrender.com";
 
-  const signup = async (email, password) => {
+  const login = async (email, password) => {
     setIsLoading(true);
     setError(null);
 
     try {
       const response = await axios.post(
-        `${URL}/api/user/signup`,
+        `${URL}/api/user/login`,
         { email, password },
         {
           headers: {
@@ -39,5 +39,5 @@ export const useSignup = () => {
     }
   };
 
-  return { signup, error, isLoading };
+  return { login, error, isLoading };
 };
